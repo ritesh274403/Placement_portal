@@ -1,0 +1,176 @@
+<%- include('partials/header'); -%>
+<style>
+    /* Custom CSS styles for the login page */
+    .login-area {
+        background-color: #f7f7f7;
+        padding: 120px 0;
+    }
+
+    .form-wrapper {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .form-title h3 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .form-inner {
+        margin-bottom: 20px;
+    }
+
+    .form-inner label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .input-area {
+        position: relative;
+    }
+
+    .input-area img {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: auto;
+    }
+
+    .input-area input {
+        padding-left: 35px;
+    }
+
+    #togglePassword {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .primry-btn-2 {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .primry-btn-2:hover {
+        background-color: #111;
+    }
+
+    h6 {
+        font-size: 14px;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    h6 a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    h6 a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer styles */
+    .footer2 {
+        background-color: #333;
+        padding: 20px 0;
+        color: #fff;
+    }
+
+    .footer2 a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer2 a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-btm-menu ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
+
+
+<div class="login-area pt-120 mb-120">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="form-wrapper">
+					<div class="form-title">
+						<h3>Log In Here!</h3>
+						<span></span>
+					</div>
+					<form action="/login" method="post">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-inner mb-25">
+									<label for="email">Email*</label>
+									<div class="input-area m-2">
+										<img src="/assets/images/icon/email-2.svg" alt="">
+										<input class="m-3" type="email" id="email" name="username" placeholder="demo@example.com"
+											required>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="form-inner">
+									<label for="email">Password*</label>
+									<input type="password" name="password" id="password" placeholder="Password"
+										required />
+									<i class="bi bi-eye-slash p-4 m-2" id="togglePassword"></i>
+								</div>
+							</div>
+							<div class="col-lg-12 mt-4">
+								<div class="form-inner">
+									<button class="primry-btn-2" type="submit">LogIn</button>
+								</div>
+							</div>
+							<h6>Don't have an account? <a href="/register">Sign Up</a></h6>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer2">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 d-flex justify-content-md-start justify-content-center">
+				<div class="copyright-area">
+					<p>©Copyright 2023 <a href="/">HireHub</a></p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center">
+				<div class="footer-btm-menu">
+					<ul>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Services</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<%- include('partials/footer'); -%>
